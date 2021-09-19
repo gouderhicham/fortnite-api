@@ -1,7 +1,8 @@
 import React from 'react' 
 import logo from "../images/logo.svg"
 import arrow from "../images/arrow.svg"
-export default function Nav() {
+import Items from './Items';
+export default function Nav({list , setList}) {
     console.log(arrow);
     return (
         <nav>
@@ -14,12 +15,7 @@ export default function Nav() {
                 <section className = "list">
                 <a className = "a-link" id="arrow-link">New items <img className ="arrow" src={arrow}/></a>
                     <ul>
-                       <a href="">fick you</a>
-                       <a href="">fick you</a>
-                       <a href="">fick you</a>
-                       <a href="">fick you</a>
-                       <a href="">fick you</a>
-                       <a href="">fick you</a>
+                    <Items list={list} setList={setList} />
                     </ul>
                 </section>
             </ul>

@@ -13,10 +13,10 @@ export default function Items({ setList, list }) {
     fetchItems();
   }, []);
   return (
-    <div className = "items-list">
+    <>
       {list.map((item) => (
         <Link key = {Math.random()} to={item.itemId}>{item.item.name}</Link>
       ))}
-    </div>
+    </>
   );
 }

@@ -10,11 +10,8 @@ export default function App() {
   return (
     <Router>
       <>
-        <Nav />
+        <Nav list={list} setList={setList} />
         <Switch>
-          <Route exact path = "/">
-            <Items list={list} setList={setList} />
-          </Route>
           <Route path = "/:id">
             <Item itemInfo={itemInfo} setItemInfo={setItemInfo} />
           </Route>

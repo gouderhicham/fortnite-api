@@ -15,7 +15,7 @@ export default function Item({ itemInfo, setItemInfo }) {
       setItemInfo(item.data);
     }
     fetchItems();
-  }, []);
+  }, [pathname]);
   console.log(itemInfo);
   return (
     <div>
