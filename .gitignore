@@ -4,12 +4,13 @@
 /node_modules
 /.pnp
 .pnp.js
-images
+
 # testing
 /coverage
 
 # production
 /build
+iamges
 
 # misc
 .DS_Store

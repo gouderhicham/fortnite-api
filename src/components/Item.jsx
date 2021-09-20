@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { useLocation } from "react-router";
 
 export default function Item({ itemInfo, setItemInfo }) {
-  let body = document.querySelector("body")
   const { pathname } = useLocation();
   useEffect(() => {
     async function fetchItems() {
@@ -16,14 +15,14 @@ export default function Item({ itemInfo, setItemInfo }) {
       setItemInfo(item.data);
     }
     fetchItems();
-  }, [pathname]);
-  body.style.backgroundColor = "black"
+  }, []);
+  console.log(itemInfo);
   return (
-    <div className = "header-container">
+    <div>
       {itemInfo && (
         <>
-          <h1 className = "header">{itemInfo.item.name}</h1>
-          <img className = "header-img" src={itemInfo.item.images.background}/>
+          <div>{itemInfo.item.name}</div>
+          <img src={itemInfo.item.images.background} width = "500" alt="" />
         </>
       )}
     </div>

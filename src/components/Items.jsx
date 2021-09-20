@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
+import Item from "./Item";
 export default function Items({ setList, list }) {
   useEffect(() => {
     async function fetchItems() {
@@ -13,10 +14,10 @@ export default function Items({ setList, list }) {
     fetchItems();
   }, []);
   return (
-    <>
+    <div className = "items-list">
       {list.map((item) => (
         <Link key = {Math.random()} to={item.itemId}>{item.item.name}</Link>
       ))}
-    </>
+    </div>
   );
 }
