@@ -10,6 +10,7 @@
 body {
   font-size: 110%;
   background: rgb(252, 252, 252);
+  overflow-x: hidden;
 }
 nav ul {
   display: flex;
@@ -46,17 +47,12 @@ nav ul a {
   margin: 0rem 2rem;
   color: black;
 }
-.items-list {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-.items-list a {
-  margin: 2rem;
-}
 .arrow {
   width: 11px;
-  transform: translateX(4px);
+  transition: 0.4s ease all;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 #arrow-link {
   cursor: pointer;
@@ -66,10 +62,11 @@ nav ul a {
 }
 .line {
   position: absolute;
-  width: 300px;
+  width: 200px;
   height: 30px;
   background-color: black;
-  left: 10px;
+  left: 0;
+  top: 20;
   transform: rotate(45deg);
 }
 .list {
@@ -81,11 +78,34 @@ nav ul a {
   transform: translateX(-50%);
   display: flex;
   flex-direction: column;
+  align-items: center;
   top: 200%;
   background: white;
+  border: rgb(240, 240, 240) 2px solid;
 }
 .list ul a {
   padding: 1rem 2rem;
+  transition: 0.7s ease all;
   width: 100%;
   text-align: center;
+}
+.list ul a:hover {
+  background-color: rgb(240, 240, 240);
+}
+.header-container{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+}
+.header {
+  margin-top: 5vh;
+  color: white;
+  position: relative;
+  font-size: 50px;
+  border-bottom: 4px black solid;
+}
+.header-img {
+  width: 30%;
+  border: 1px solid black;
 }
