@@ -1,18 +1,60 @@
-import { useEffect } from "react";
-
+import closed from "../images/closed.svg"
 export default function Nav() {
-    useEffect(() => {
-        const script = document.createElement('script');
-      
-        script.src = "../custom/script.js";
-        script.defer = true;
-      
-        document.body.appendChild(script);
-      
-        return () => {
-          document.body.removeChild(script);
-        }
-      }, []);
+  let navbarMenu = document.querySelector(".navbar");
+  const menuOverlay = document.querySelector(".overlay");
+  const ex = document.querySelectorAll(".expand");
+  function toggleMenu() {
+    navbarMenu.classList.toggle("active");
+    menuOverlay.classList.toggle("active");
+    document.body.classList.toggle("scrolling");
+  }
+  function toggleNav(event){
+    if (event.target.hasAttribute('data-toggle') && window.innerWidth && window.innerWidth <= 992) {
+       event.preventDefault();
+       const menuItemHasChildren = event.target.parentElement;
+       let expand = event.target.children[0]
+       if (menuItemHasChildren.classList.contains('active')) {
+          collapseSubMenu();
+       } else {
+          if (navbarMenu.querySelector('.menu-item-has-children.active')) {
+             collapseSubMenu();
+          }
+          menuItemHasChildren.classList.add('active');
+          expand.classList.add("active")
+          const subMenu = menuItemHasChildren.querySelector('.sub-menu');
+          subMenu.style.maxHeight = subMenu.scrollHeight + 'px';
+       }
+    }
+ }
+ function collapseSubMenu() {
+    navbarMenu.querySelector('.menu-item-has-children.active .sub-menu').removeAttribute('style');
+    navbarMenu.querySelector('.menu-item-has-children.active').classList.remove('active');
+    ex.forEach(e => {
+       if (e.classList.contains("active")) {
+          e.classList.remove("active")
+       }
+    })
+ }
+ function resizeScreen() {
+    const navbarMenu = document.querySelector(".navbar");
+    // If navbarMenu is Open, Close It
+    if (navbarMenu.classList.contains('active')) {
+       toggleMenu();
+    }
+ 
+    // If menuItemHasChildren is Expanded, Collapse It
+    if (navbarMenu.querySelector('.menu-item-has-children.active')) {
+       collapseSubMenu();
+    }
+ }
+ 
+ window.addEventListener('resize', () => {
+     if (window.innerWidth !== undefined) {
+        if (window.innerWidth > 992) {
+            resizeScreen();
+         }
+     }
+ });
   return (
     <header className="header">
       <div className="container">
@@ -22,16 +64,16 @@ export default function Nav() {
               Brand
             </a>
           </h1>
-          <button type="button" className="opened-menu">
+          <button onClick={toggleMenu} type="button" className="opened-menu">
             <span></span>
             <span></span>
             <span></span>
             <span></span>
           </button>
-          <div className="overlay"></div>
-          <nav className="navbar">
-            <button type="button" className="closed-menu">
-              <img src="./closed.svg" className="closed-icon" alt="closed" />
+          <div onClick={toggleMenu} className="overlay"></div>
+          <nav onClick = {toggleNav} className="navbar">
+            <button onClick={toggleMenu} type="button" className="closed-menu">
+              <img src = {closed} className="closed-icon" alt="closed" />
             </button>
             <ul className="menu">
               <li className="menu-item">
@@ -41,7 +83,7 @@ export default function Nav() {
                 <a href="#" className="a" data-toggle="sub-menu">
                   All Items
                   <svg
-                    id = "expand"
+                    id="expand"
                     className="expand"
                     aria-hidden="true"
                     focusable="false"
@@ -80,7 +122,7 @@ export default function Nav() {
                 <a href="#" className="a" data-toggle="sub-menu">
                   Other Categories
                   <svg
-                  id = "expand"
+                    id="expand"
                     className="expand"
                     aria-hidden="true"
                     focusable="false"
