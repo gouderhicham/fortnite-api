@@ -1,22 +1,26 @@
+import { useRef } from "react";
 import closed from "../images/closed.svg"
+import logo from "../images/logo.svg"
 export default function Nav() {
-  let navbarMenu = document.querySelector(".navbar");
-  const menuOverlay = document.querySelector(".overlay");
-  const ex = document.querySelectorAll(".expand");
+  let ex 
+  let navbarMenu = useRef(null)
+  let menuOverlay = useRef(null)
   function toggleMenu() {
-    navbarMenu.classList.toggle("active");
-    menuOverlay.classList.toggle("active");
+    navbarMenu.current.classList.toggle("active");
+    menuOverlay.current.classList.toggle("active");
     document.body.classList.toggle("scrolling");
   }
   function toggleNav(event){
+    ex = document.querySelectorAll("#expand")
+    let expand = event.target.children[0]
     if (event.target.hasAttribute('data-toggle') && window.innerWidth && window.innerWidth <= 992) {
        event.preventDefault();
+       expand.classList.toggle("active")
        const menuItemHasChildren = event.target.parentElement;
-       let expand = event.target.children[0]
        if (menuItemHasChildren.classList.contains('active')) {
           collapseSubMenu();
        } else {
-          if (navbarMenu.querySelector('.menu-item-has-children.active')) {
+          if (navbarMenu.current.querySelector('.menu-item-has-children.active')) {
              collapseSubMenu();
           }
           menuItemHasChildren.classList.add('active');
@@ -27,13 +31,11 @@ export default function Nav() {
     }
  }
  function collapseSubMenu() {
-    navbarMenu.querySelector('.menu-item-has-children.active .sub-menu').removeAttribute('style');
-    navbarMenu.querySelector('.menu-item-has-children.active').classList.remove('active');
-    ex.forEach(e => {
-       if (e.classList.contains("active")) {
-          e.classList.remove("active")
-       }
-    })
+    document.querySelector('.menu-item-has-children.active .sub-menu').removeAttribute('style');
+    document.querySelector('.menu-item-has-children.active').classList.remove('active');
+    ex.forEach(e=> {
+      e.classList.remove("active")
+    });
  }
  function resizeScreen() {
     const navbarMenu = document.querySelector(".navbar");
@@ -60,8 +62,8 @@ export default function Nav() {
       <div className="container">
         <section className="wrapper">
           <h1>
-            <a href="./index.html" className="brand">
-              Brand
+            <a href="/" className="brand">
+              <img className = "logo" src={logo} alt="" />
             </a>
           </h1>
           <button onClick={toggleMenu} type="button" className="opened-menu">
@@ -70,8 +72,8 @@ export default function Nav() {
             <span></span>
             <span></span>
           </button>
-          <div onClick={toggleMenu} className="overlay"></div>
-          <nav onClick = {toggleNav} className="navbar">
+          <div onClick={toggleMenu} ref = {menuOverlay}className="overlay"></div>
+          <nav onClick = {toggleNav} ref = {navbarMenu} className="navbar">
             <button onClick={toggleMenu} type="button" className="closed-menu">
               <img src = {closed} className="closed-icon" alt="closed" />
             </button>
@@ -115,6 +117,9 @@ export default function Nav() {
                   </li>
                   <li className="menu-item">
                     <a href="#">Contrail</a>
+                  </li>
+                  <li className="menu-item">
+                    <a href="#">wraps</a>
                   </li>
                 </ul>
               </li>
