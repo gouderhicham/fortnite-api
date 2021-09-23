@@ -1,12 +1,11 @@
-import { useRef } from "react";
 import closed from "../images/closed.svg"
 export default function Nav() {
-  let navbarMenu = useRef(null)
-  let menuOverlay = useRef(null)
+  let navbarMenu = document.querySelector(".navbar");
+  const menuOverlay = document.querySelector(".overlay");
   const ex = document.querySelectorAll(".expand");
   function toggleMenu() {
-    navbarMenu.current.classList.toggle("active");
-    menuOverlay.current.classList.toggle("active");
+    navbarMenu.classList.toggle("active");
+    menuOverlay.classList.toggle("active");
     document.body.classList.toggle("scrolling");
   }
   function toggleNav(event){
@@ -17,7 +16,7 @@ export default function Nav() {
        if (menuItemHasChildren.classList.contains('active')) {
           collapseSubMenu();
        } else {
-          if (navbarMenu.current.querySelector('.menu-item-has-children.active')) {
+          if (navbarMenu.querySelector('.menu-item-has-children.active')) {
              collapseSubMenu();
           }
           menuItemHasChildren.classList.add('active');
@@ -28,8 +27,8 @@ export default function Nav() {
     }
  }
  function collapseSubMenu() {
-    navbarMenu.current.querySelector('.menu-item-has-children.active .sub-menu').removeAttribute('style');
-    navbarMenu.current.querySelector('.menu-item-has-children.active').classList.remove('active');
+    navbarMenu.querySelector('.menu-item-has-children.active .sub-menu').removeAttribute('style');
+    navbarMenu.querySelector('.menu-item-has-children.active').classList.remove('active');
     ex.forEach(e => {
        if (e.classList.contains("active")) {
           e.classList.remove("active")
@@ -61,7 +60,7 @@ export default function Nav() {
       <div className="container">
         <section className="wrapper">
           <h1>
-            <a href="/" className="brand">
+            <a href="./index.html" className="brand">
               Brand
             </a>
           </h1>
@@ -71,8 +70,8 @@ export default function Nav() {
             <span></span>
             <span></span>
           </button>
-          <div onClick={toggleMenu} ref = {menuOverlay}className="overlay"></div>
-          <nav onClick = {toggleNav} ref = {navbarMenu} className="navbar">
+          <div onClick={toggleMenu} className="overlay"></div>
+          <nav onClick = {toggleNav} className="navbar">
             <button onClick={toggleMenu} type="button" className="closed-menu">
               <img src = {closed} className="closed-icon" alt="closed" />
             </button>
@@ -116,9 +115,6 @@ export default function Nav() {
                   </li>
                   <li className="menu-item">
                     <a href="#">Contrail</a>
-                  </li>
-                  <li className="menu-item">
-                    <a href="#">wraps</a>
                   </li>
                 </ul>
               </li>
