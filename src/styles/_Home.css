@@ -1,0 +1,33 @@
+.bk-img {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  background: no-repeat top;
+  background-size: cover;
+  overflow: hidden;
+}
+@media only screen and (max-width: 600px) {
+
+  .bk-img {
+    background-image: url("https://cdn2.unrealengine.com/fortnite-chapter-2-season-8-overview-page-key-art-bg-mobile-752x1190-23c9e7a57edb.jpg");
+  }
+}
+@media only screen and (min-width: 600px) {
+  .bk-img {
+    background-image: url("https://cdn2.unrealengine.com/fortnite-chapter-2-season-8-home-page-key-art-desktop-3008x1692-b4ab925bc928.jpg");
+  }
+  
+}
+.bk-img::after{
+  
+    position: absolute;
+    content: ""; 
+    height : 100% ; 
+    width : 100% ; 
+    background: rgba(0, 0, 0, 0.432) ; 
+    top: 0;
+    left: 0;
+}

@@ -46,6 +46,9 @@ button {
 }
 
 @media only screen and (max-width: 768px) {
+  .logo{
+    width: 140px;
+  }
   a,
   button {
     cursor: default !important;
@@ -174,7 +177,7 @@ video {
   color: #e91e63;
 }
 
-.expand.active{
+#expand.active{
   transform: rotateX(180deg) translateY(-8px);
 }
 .header .menu > .menu-item > .sub-menu {
