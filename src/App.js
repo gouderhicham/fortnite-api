@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route,  Switch } from "react-router-dom";
 import Items from "./components/Items";
 import Home from "./components/Home";
 import Nav from "./components/Nav";
+import Footer from "./components/Footer";
 import "./App.css"
 import Item from "./components/Item";
 export default function App() {
@@ -23,6 +24,7 @@ export default function App() {
             <Item itemInfo={itemInfo} setItemInfo={setItemInfo} />
           </Route>
         </Switch>
+        <Footer /> 
       </>
     </Router>
   );
