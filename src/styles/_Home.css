@@ -15,7 +15,6 @@
   overflow: hidden;
 }
 @media only screen and (max-width: 600px) {
-
   .bk-img {
     background-image: url("https://cdn2.unrealengine.com/fortnite-chapter-2-season-8-overview-page-key-art-bg-mobile-752x1190-23c9e7a57edb.jpg");
   }
@@ -24,16 +23,15 @@
   .bk-img {
     background-image: url("https://cdn2.unrealengine.com/fortnite-chapter-2-season-8-home-page-key-art-desktop-3008x1692-b4ab925bc928.jpg");
   }
-  
 }
-.bk-img::after{
-    position: absolute;
-    content: ""; 
-    height : 100% ; 
-    width : 100% ; 
-    background: rgba(0, 0, 0, 0.432) ; 
-    top: 0;
-    left: 0;
+.bk-img::after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.432);
+  top: 0;
+  left: 0;
 }
 .home-main {
   display: flex;
@@ -48,7 +46,70 @@
   z-index: 10;
 }
 .home-main img {
+  margin-top: 10px;
   width: 500px;
-  box-shadow: inset 0px 0px 100px 120px rgba(255, 25, 236, 0.397) ,
-  0px 00px 100px 50px rgba(255, 25, 236, 0.397);
+  box-shadow: inset 0px 0px 100px 120px rgba(255, 25, 236, 0.397),
+    0px 00px 100px 50px rgba(255, 25, 236, 0.397);
+}
+.btns-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 40px;
+  width: 420px;
+}
+.btns-container .btn {
+  background: rgb(255, 218, 11);
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 220px;
+  height: 50px;
+  clip-path: polygon(0% 16%, 100% 6%, 98% 100%, 2% 90%);
+  font-size: 18px;
+}
+.btns-container .download {
+  color: rgb(231, 231, 231);
+  font-size: 24px;
+}
+@media screen and (max-width : 1026px) {
+  .home-main h2 {
+    font-size: 33px;    
+  }
+  .home-main img {
+    width: 360px;
+  }
+  .btns-container .download {
+    font-size: 23px;
+  }
+  .btns-container{
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width : 631px) {
+  .home-main img {
+    width: 340px;
+  }
+}
+@media screen and (max-width : 514px) {
+  .home-main h2 {
+    font-size: 33px;    
+  }
+  .btns-container .download {
+    font-size: 23px;
+  }
+  .home-main img {
+    width: 70%;
+    margin-top: 0px;
+  }
+  .btns-container {
+    margin-top: 40px;
+    width: auto;
+    flex-direction: column-reverse;
+  }
+  .btns-container .download {
+    font-size: 22px;
+  }
 }

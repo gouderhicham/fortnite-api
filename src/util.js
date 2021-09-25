@@ -102,3 +102,13 @@ export function fetchPopular() {
   return fetch("https://fortnite-api.theapinetwork.com/items/popular")
     .then((res) => res.json()).then(res => res.entries )
 }
+export function fetchChallenges() {
+  return fetch("https://fortniteapi.io/v1/news?lang=en&type=br" , {
+         method : "GET" , 
+         headers : {
+              'Content-Type': 'application/json',
+                "Authorization":"b89032ab-fb6fe87c-0bb33b64-929f9f6e"
+         }
+  })
+    .then((res) => res.json()).then(res => res.news)
+}
