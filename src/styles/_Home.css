@@ -1,3 +1,7 @@
+@font-face {
+  font-family: hicham;
+  src: url(/src/fonts/BurbankBigRegular.otf);
+}
 .bk-img {
   top: 0;
   left: 0;
@@ -23,7 +27,6 @@
   
 }
 .bk-img::after{
-  
     position: absolute;
     content: ""; 
     height : 100% ; 
@@ -31,4 +34,21 @@
     background: rgba(0, 0, 0, 0.432) ; 
     top: 0;
     left: 0;
+}
+.home-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: hicham;
+}
+.home-main h2 {
+  font-size: 37px;
+  margin-top: 300px;
+  color: rgb(231, 231, 231);
+  z-index: 10;
+}
+.home-main img {
+  width: 500px;
+  box-shadow: inset 0px 0px 100px 120px rgba(255, 25, 236, 0.397) ,
+  0px 00px 100px 50px rgba(255, 25, 236, 0.397);
 }

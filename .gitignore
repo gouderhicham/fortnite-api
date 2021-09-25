@@ -10,7 +10,6 @@
 
 # production
 /build
-iamges
 
 # misc
 .DS_Store

@@ -1,47 +1,16 @@
 import React from "react";
-import background from "../images/background.jpeg";
-const MAIN_LOGO_URL = "https://cdn2.unrealengine.com/cubed-logo-en-763x198-a0ecb436bcc5.png"
+import home_background from "../images/home-background.png";
 export default function Home() {
   return (
     <>
-      <div
-        className="bk-img"
-      ></div>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas accusantium impedit perspiciatis sapiente magni dolorum sit distinctio et ab! Eos quas itaque totam assumenda quaerat, quis corrupti aliquid temporibus officiis.</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas accusantium impedit perspiciatis sapiente magni dolorum sit distinctio et ab! Eos quas itaque totam assumenda quaerat, quis corrupti aliquid temporibus officiis.</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas accusantium impedit perspiciatis sapiente magni dolorum sit distinctio et ab! Eos quas itaque totam assumenda quaerat, quis corrupti aliquid temporibus officiis.</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas accusantium impedit perspiciatis sapiente magni dolorum sit distinctio et ab! Eos quas itaque totam assumenda quaerat, quis corrupti aliquid temporibus officiis.</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas accusantium impedit perspiciatis sapiente magni dolorum sit distinctio et ab! Eos quas itaque totam assumenda quaerat, quis corrupti aliquid temporibus officiis.</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas accusantium impedit perspiciatis sapiente magni dolorum sit distinctio et ab! Eos quas itaque totam assumenda quaerat, quis corrupti aliquid temporibus officiis.</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas accusantium impedit perspiciatis sapiente magni dolorum sit distinctio et ab! Eos quas itaque totam assumenda quaerat, quis corrupti aliquid temporibus officiis.</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas accusantium impedit perspiciatis sapiente magni dolorum sit distinctio et ab! Eos quas itaque totam assumenda quaerat, quis corrupti aliquid temporibus officiis.</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas accusantium impedit perspiciatis sapiente magni dolorum sit distinctio et ab! Eos quas itaque totam assumenda quaerat, quis corrupti aliquid temporibus officiis.</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas accusantium impedit perspiciatis sapiente magni dolorum sit distinctio et ab! Eos quas itaque totam assumenda quaerat, quis corrupti aliquid temporibus officiis.</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas accusantium impedit perspiciatis sapiente magni dolorum sit distinctio et ab! Eos quas itaque totam assumenda quaerat, quis corrupti aliquid temporibus officiis.</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas accusantium impedit perspiciatis sapiente magni dolorum sit distinctio et ab! Eos quas itaque totam assumenda quaerat, quis corrupti aliquid temporibus officiis.</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas accusantium impedit perspiciatis sapiente magni dolorum sit distinctio et ab! Eos quas itaque totam assumenda quaerat, quis corrupti aliquid temporibus officiis.</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas accusantium impedit perspiciatis sapiente magni dolorum sit distinctio et ab! Eos quas itaque totam assumenda quaerat, quis corrupti aliquid temporibus officiis.</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas accusantium impedit perspiciatis sapiente magni dolorum sit distinctio et ab! Eos quas itaque totam assumenda quaerat, quis corrupti aliquid temporibus officiis.</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas accusantium impedit perspiciatis sapiente magni dolorum sit distinctio et ab! Eos quas itaque totam assumenda quaerat, quis corrupti aliquid temporibus officiis.</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas accusantium impedit perspiciatis sapiente magni dolorum sit distinctio et ab! Eos quas itaque totam assumenda quaerat, quis corrupti aliquid temporibus officiis.</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas accusantium impedit perspiciatis sapiente magni dolorum sit distinctio et ab! Eos quas itaque totam assumenda quaerat, quis corrupti aliquid temporibus officiis.</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas accusantium impedit perspiciatis sapiente magni dolorum sit distinctio et ab! Eos quas itaque totam assumenda quaerat, quis corrupti aliquid temporibus officiis.</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas accusantium impedit perspiciatis sapiente magni dolorum sit distinctio et ab! Eos quas itaque totam assumenda quaerat, quis corrupti aliquid temporibus officiis.</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas accusantium impedit perspiciatis sapiente magni dolorum sit distinctio et ab! Eos quas itaque totam assumenda quaerat, quis corrupti aliquid temporibus officiis.</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas accusantium impedit perspiciatis sapiente magni dolorum sit distinctio et ab! Eos quas itaque totam assumenda quaerat, quis corrupti aliquid temporibus officiis.</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas accusantium impedit perspiciatis sapiente magni dolorum sit distinctio et ab! Eos quas itaque totam assumenda quaerat, quis corrupti aliquid temporibus officiis.</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas accusantium impedit perspiciatis sapiente magni dolorum sit distinctio et ab! Eos quas itaque totam assumenda quaerat, quis corrupti aliquid temporibus officiis.</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas accusantium impedit perspiciatis sapiente magni dolorum sit distinctio et ab! Eos quas itaque totam assumenda quaerat, quis corrupti aliquid temporibus officiis.</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas accusantium impedit perspiciatis sapiente magni dolorum sit distinctio et ab! Eos quas itaque totam assumenda quaerat, quis corrupti aliquid temporibus officiis.</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas accusantium impedit perspiciatis sapiente magni dolorum sit distinctio et ab! Eos quas itaque totam assumenda quaerat, quis corrupti aliquid temporibus officiis.</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas accusantium impedit perspiciatis sapiente magni dolorum sit distinctio et ab! Eos quas itaque totam assumenda quaerat, quis corrupti aliquid temporibus officiis.</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas accusantium impedit perspiciatis sapiente magni dolorum sit distinctio et ab! Eos quas itaque totam assumenda quaerat, quis corrupti aliquid temporibus officiis.</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas accusantium impedit perspiciatis sapiente magni dolorum sit distinctio et ab! Eos quas itaque totam assumenda quaerat, quis corrupti aliquid temporibus officiis.</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas accusantium impedit perspiciatis sapiente magni dolorum sit distinctio et ab! Eos quas itaque totam assumenda quaerat, quis corrupti aliquid temporibus officiis.</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas accusantium impedit perspiciatis sapiente magni dolorum sit distinctio et ab! Eos quas itaque totam assumenda quaerat, quis corrupti aliquid temporibus officiis.</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas accusantium impedit perspiciatis sapiente magni dolorum sit distinctio et ab! Eos quas itaque totam assumenda quaerat, quis corrupti aliquid temporibus officiis.</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas accusantium impedit perspiciatis sapiente magni dolorum sit distinctio et ab! Eos quas itaque totam assumenda quaerat, quis corrupti aliquid temporibus officiis.</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas accusantium impedit perspiciatis sapiente magni dolorum sit distinctio et ab! Eos quas itaque totam assumenda quaerat, quis corrupti aliquid temporibus officiis.</p>
+      <div className="bk-img"></div>
+      <main className = "home-main">
+        <h2>Season 8</h2>
+        <img src={home_background} className="home-background" />
+        <div className="btns-container">
+          <a href="/" className = "btn"></a>
+        </div>
+      </main>
     </>
   );
 }

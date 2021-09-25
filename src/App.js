@@ -24,7 +24,7 @@ export default function App() {
             <Item itemInfo={itemInfo} setItemInfo={setItemInfo} />
           </Route>
         </Switch>
-        <Footer /> 
+         
       </>
     </Router>
   );
