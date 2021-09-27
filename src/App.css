@@ -1,6 +1,7 @@
 @import "./styles/_Nav.css";
 @import "./styles/_Home.css";
 @import "./styles/_Footer.css";
+@import "./styles/_GridBox.css"; 
 html {
   font-size: 100%;
   -webkit-box-sizing: border-box;

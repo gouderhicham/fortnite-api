@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Route,  Switch } from "react-router-dom";
-import Items from "./components/Items";
+import MainPage from "./pages/MainPage";
+import Items from "./components/Items"
 import Home from "./pages/Home";
 import Nav from "./components/Nav";
-import Footer from "./components/Footer";
 import "./App.css"
 import Item from "./components/Item";
 export default function App() {
@@ -20,8 +20,11 @@ export default function App() {
           <Route exact path = "/upcoming">
             <Items list={list} setList={setList} />
           </Route>
-          <Route path = "/:id">
+          <Route path = "/items/:id">
             <Item itemInfo={itemInfo} setItemInfo={setItemInfo} />
+          </Route>
+          <Route path = "/mainpage">
+            <MainPage />
           </Route>
         </Switch>
          

@@ -1,0 +1,31 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  background-color: white;
+  padding: 110px;
+  gap: 25px;
+}
+.grid-box {
+  font-family: hicham;
+  background-color: hsl(0, 0%, 95%);
+  height: auto;
+}
+.grid-box img {
+  object-fit: cover;
+  width: 100%;
+  height: 50%;
+}
+.text-container {
+  padding: 5px 20px 20px 5px;
+}
+.text-container p {
+  color: #1db8f3;
+}
+.text-container h2 {
+  color: black;
+}
+@media screen and (min-width: 800px) {
+  .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+}
