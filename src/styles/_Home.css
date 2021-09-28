@@ -46,6 +46,7 @@
   z-index: 10;
 }
 .home-main img {
+  transition: 1s ease all;
   margin-top: 10px;
   width: 500px;
   box-shadow: inset 0px 0px 100px 120px rgba(255, 25, 236, 0.397),
@@ -73,9 +74,9 @@
   color: rgb(231, 231, 231);
   font-size: 24px;
 }
-@media screen and (max-width : 1026px) {
+@media screen and (max-width: 1026px) {
   .home-main h2 {
-    font-size: 33px;    
+    font-size: 33px;
   }
   .home-main img {
     width: 360px;
@@ -83,19 +84,19 @@
   .btns-container .download {
     font-size: 23px;
   }
-  .btns-container{
+  .btns-container {
     margin-top: 30px;
   }
 }
 
-@media screen and (max-width : 631px) {
+@media screen and (max-width: 631px) {
   .home-main img {
     width: 340px;
   }
 }
-@media screen and (max-width : 514px) {
+@media screen and (max-width: 514px) {
   .home-main h2 {
-    font-size: 33px;    
+    font-size: 33px;
   }
   .btns-container .download {
     font-size: 23px;

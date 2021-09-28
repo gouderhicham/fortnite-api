@@ -160,6 +160,9 @@ export default function Nav() {
                   <li className="menu-item">
                     <a href="#">Bundles</a>
                   </li>
+                  <li className="menu-item">
+                    <a href="#">News</a>
+                  </li>
                 </ul>
               </li>
               <li className="menu-item">
