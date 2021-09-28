@@ -1,8 +1,10 @@
 .grid-container {
+  position: relative;
+  top: 35rem;
+  left: 0;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-template-rows: repeat(5, 450px);
-  background-color: white;
+  grid-auto-rows: 450px;
   padding: 110px;
   gap: 25px;
 }
@@ -12,7 +14,6 @@
   height: auto;
   overflow: hidden;
 }
-
 .grid-box img {
   object-fit: cover;
   width: 100%;
@@ -46,12 +47,7 @@
     grid-column: 1 / span 2;
   }
 }
-@media screen and (max-width: 1214px) {
-  .grid-container {
-    grid-template-rows: repeat(6, 450px);
-    padding: 70px;
-  }
-}
+
 @media screen and (max-width: 999px) {
   .grid-container {
     padding: 40px;
@@ -66,5 +62,58 @@
   }
   .grid-colomn_9 {
     grid-column: 1/2 span;
+  }
+}
+.main-page_bk-img {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 35rem;
+  position: absolute;
+  background: no-repeat top;
+  background-image: url("https://cdn2.unrealengine.com/creativemode-headerimage-3602x1188-f49614c153de.png");
+  background-size: cover;
+  background-position: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-page_bk-img p {
+  font-size: 120px;
+  font-family: hicham;
+  color: white;
+  text-shadow: -10px -10px 40px rgb(153, 153, 153);
+}
+@media screen and (max-width: 980px) {
+  .main-page_bk-img {
+    background-image: url("https://cdn2.unrealengine.com/creativemode-headerimage-m-1024x1536-8ac4fa0737a2-1024x1536-b978787c898c.png");
+  }
+}
+@media screen and (max-width: 338px) {
+  .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+@media screen and (max-height: 740px) and (max-width: 900px) {
+  .main-page_bk-img {
+    height: 32rem;
+  }
+}
+@media screen and (max-width: 1214px) {
+  .grid-container {
+    padding: 70px;
+  }
+  .main-page_bk-img p {
+    font-size: 100px;
+  }
+}
+@media screen and (max-width: 823px) {
+  .main-page_bk-img p {
+    font-size: 90px;
+  }
+}
+@media screen and (max-width : 461px) {
+  .main-page_bk-img p {
+    font-size: 75px;
   }
 }
